@@ -1,3 +1,70 @@
 {
-  "extends": "next/core-web-vitals"
+  "root": true,
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:jsx-a11y/strict",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:tailwindcss/recommended",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "jsx-a11y",
+    "@typescript-eslint",
+    "write-good-comments",
+    "no-secrets",
+    "filenames",
+    "prettier"
+  ],
+
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "write-good-comments/write-good-comments": "warn",
+    "no-secrets/no-secrets": "error",
+    "no-unused-vars": "off",
+
+    // filenames
+    "filenames/match-regex": [2, "^[a-z][a-z-]*[a-z]$", true],
+
+    // imports
+    "import/no-unresolved": "error",
+    "no-restricted-imports": [
+      "error",
+      {
+        "patterns": ["@/features/*/*"]
+      }
+    ],
+
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "object"
+        ],
+        "newlines-between": "always",
+        "alphabetize": { "order": "asc", "caseInsensitive": true }
+      }
+    ],
+
+    "prettier/prettier": ["warn", {}, { "usePrettierrc": true }]
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    }
+  }
 }
