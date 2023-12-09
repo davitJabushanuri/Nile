@@ -27,7 +27,7 @@
     "no-unused-vars": "off",
 
     // filenames
-    "filenames/match-regex": [2, "^[a-z][a-z-]*[a-z](.d)?$", true],
+    "filenames/match-regex": [2, "^[a-z][a-z-.]", true],
 
     // imports
     "import/no-unresolved": "error",
