@@ -11,6 +11,8 @@
     "lint:fix": "next lint --fix",
     "format": "prettier .",
     "format:fix": "prettier --write .",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "tsc --noEmit --watch",
     "test": "exit 0",
     "prepare": "husky install"
   },

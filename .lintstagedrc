@@ -3,5 +3,5 @@
     "eslint --fix",
     "prettier --write"
   ],
-  "src/**/*.{ts,tsx}": "tsc --noEmit"
+  "src/**/*.{ts,tsx}": "bash -c 'pnpm type-check'"
 }
